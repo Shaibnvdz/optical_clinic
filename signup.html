@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src="js/validation.js" defer></script>
+
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        *{
+            font-family: poppins;
+            color: #ffffff;
+        }
+
+        .bgphoto{
+            position: absolute;
+            width: 100%;
+            height: 775px;
+        }
+
+        .signup-form-container{
+            position: absolute;
+            background: rgba(229, 229, 229, 0.3);
+            height: 600px;
+            width: 500px;
+            margin-left: 490px;
+            border-radius: 10px;
+            margin-top: 90px;
+        }
+
+        .edit-form-container{
+            position: absolute;
+            margin-left: 70px;
+            margin-top: 100px;
+        }
+
+        .name{
+                border-radius: 8px;
+                height: 30px;
+                outline: #40596b;
+                padding: 0 10px 0 45px;
+                border: none;
+                border-radius: 40px;
+                color: #40596b !important;
+                margin-top: 25px;
+                width: 300px;
+            }
+
+            input[type="email"]{
+                border-radius: 8px;
+                height: 30px;
+                outline: #40596b;
+                padding: 0 10px 0 45px;
+                border: none;
+                border-radius: 40px;
+                margin-top: 40px;
+                margin-left: 0px;
+                width: 300px;
+                color: #40596b !important;
+            }
+            
+            .password{
+                border-radius: 8px;
+                height: 30px;
+                outline: #40596b;
+                padding: 0 10px 0 45px;
+                border: none;
+                border-radius: 40px;
+                margin-top: 40px;
+                margin-left: 0;
+                width: 300px;
+                color: #40596b !important;
+            }
+
+            .confirmpassword{
+                border-radius: 8px;
+                height: 30px;
+                outline: #40596b;
+                padding: 0 10px 0 45px;
+                border: none;
+                border-radius: 40px;
+                margin-top: 40px;
+                margin-left: 0px;
+                width: 300px;
+                color: #40596b !important;
+            }
+
+        .btnsignup{
+            position: absolute;
+            background-color: #f89819;
+            border: none;
+            width: 180px;
+            height: 40px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 23px;
+            margin-left: 90px;
+            margin-top: 80px;
+        }
+
+        .lblname{
+            position: absolute;
+            
+        }
+
+        .lblemail{
+            position: absolute;
+            margin-top: 15px;
+        }
+
+        .lblpassword{
+            position: absolute;
+            margin-top: 15px;
+        }
+
+        .lblcpassword{
+            position: absolute;
+            margin-top: 15px;
+        }
+
+        .txtsignup{
+            position: absolute;
+            margin-left: 70px;
+            margin-top: 30px;
+            font-size: 40px;
+        }
+
+        .haveaccount-container{
+            position: absolute;                        
+            margin-top: 10px;
+            margin-left: 40px;           
+        }
+
+        .linklogin{
+            text-decoration: none;
+            position: absolute;
+            margin-left: 220px;
+            margin-top: -40px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <img class="bgphoto" src=".\\imagesfinal\bgphotowcolor1.jpg" alt="">
+
+    <div class="signup-form-container">
+        <h1 class="txtsignup">Signup</h1>
+        <div class="edit-form-container">
+            
+    
+            <form action="process-signup.php" method="post" id="signup" novalidate>
+                <div>
+                    <label class="lblname" for="name">Name</label>
+                    <input class="name" type="text" id="name" name="name" placeholder="Enter Name">
+                </div>
+                
+                <div>
+                    <label class="lblemail" for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email">
+                </div>
+                
+                <div>
+                    <label class="lblpassword" for="password">Password</label>
+                    <input class="password" type="password" id="password" name="password" placeholder="Enter Password">
+                </div>
+                
+                <div>
+                    <label class="lblcpassword" for="password_confirmation">Confirm password</label>
+                    <input class="confirmpassword" type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password">
+                </div>
+
+                <!-- Add user_type field with value "admin" -->
+                <input type="hidden" name="user_type" value="customer">
+                
+                <div class="haveaccount-container">
+                    <p class="haveaccount">Already have an account? </p><a class="linklogin" href="login.php">Login</a>
+                </div>
+                
+                <button class="btnsignup">Sign up</button>
+            </form>
+        </div>
+        
+    </div>
+    
+
+    
+</body>
+</html>
